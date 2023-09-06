@@ -153,7 +153,7 @@ One final, extremely useful thing related to strings is the ```f-string``` or fo
 ```python
     # define name variable
     name = "Ross"
-    print(f"My name is  {Ross}")
+    print(f"My name is  {name}")
 
     # expressions in f-strings
     print(f"The sum 2+3 is equal to {2+3}")
@@ -167,14 +167,21 @@ These can be useful when used alongside other string processing methods, especia
     print(outfile)
 
     # More concise; less readable?
-    outfile_concise = f"{infile.split(".")[0]}.processed_data.csv"
-    outfile == outfile_concise
-```
-Remember quotation marks!
-```python
     outfile_concise = f"{infile.split('.')[0]}.processed_data.csv"
     outfile == outfile_concise
 ```
+
+### Exercise: Remember quotation marks!
+
+Try running the following:
+
+```python
+outfile_concise = f"{infile.split(".")[0]}.processed_data.csv"
+outfile == outfile_concise
+```
+
+You will note that it does not run. Can you explain why?
+
 ## Sequence types
 
 Sequence types are some of the most useful of Python's fundamental data types. If you write a Python program without some kind of sequence type, you're probably doing it wrong.
@@ -242,6 +249,9 @@ Lists are incredibly simple but powerful data structures. Use them wisely!
 
 Find fifth word in a sentence. (Str->List, index list)
 
+**Example**:
+For instance the sentence "hello my name is kenneth" -> ["hello", "my", "name", "is", "kenneth"] -> "kenneth"
+
 ### Tuples
 
 ```Tuples``` are essentially identical to lists but with one important difference, namely that ```tuples``` are immutable. That is to say, they can't be modified when they've been created:
@@ -289,7 +299,7 @@ Note that we can also define the step size for a range of values:
 One of the most dramatically undervalued data types in the whole Python programming language is the ```dict``` or dictionary type. Dictionaries are constructed around combinations of {key:value} pairings. So unlike sequence types which are indexed by a range of numbers, ```dict``` objects are indexed by a specific *key*.
 ```python
     # dictionary of users
-    users = {"mary" : 42; "john" : 31}
+    users = {"mary" : 42, "john" : 31}
     # get value for Mary
     users["mary"]
     # add new user
