@@ -1,3 +1,2 @@
-print("what is your name?")
-name = input()
+name = input("what is your name? ")
 print(f"Hello {name.capitalize()}!")
