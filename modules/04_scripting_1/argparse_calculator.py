@@ -6,10 +6,13 @@ def parse_args():
     parser.add_argument("--first", help="The first number", type=float)
     parser.add_argument("--second", help="The second number", type =float)
     parser.add_argument("--operator", help="The operator")
+    
     return parser.parse_args()
 
-
-if __name__ in "__main__":
+def main():
     args = parse_args()
     output = calculate(args.first, args.second, args.operator)
     print(output)
+
+if __name__ in "__main__":
+    main()
